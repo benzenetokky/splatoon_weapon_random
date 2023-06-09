@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--
+    Copyright © 2023 benzenetokky
+    This software is released under the MIT License.
+    See LICENSE.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>splatoon3ブキをランダム選択</title>
+    </head>
+    <body>
+        <font size="+2">splatoon3のブキから<font color="red">ランダムで1つ</font>選びます。</font><br><br>
+        <input id="btn" type="button" value="ランダム選択" /><br><br>
+        <font size="+1">結果</font><br>
+        <table width="30%" border="3" style="border-collapse: collapse"><font size="+2"><td><div class="respo" id="respo">
+            ここに結果が出力
+        </div></td></font></table><br><br>
+        <font size="+1">持っているブキにチェックマークを付けてください。</font><br>
+        <font size="-1"><a href="JavaScript:Allchoose(true)">全ブキ選択</a>&emsp;<a href="JavaScript:Allchoose(false)">全ブキ選択解除</a></font>
+        <table border="3" style="border-collapse: collapse" width="90%">
+            <tr>
+                <th width="18%" colspan="2"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Shooter')">シューター系</a></th>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Roller')">ローラー系</a></th>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Charger')">チャージャー系</a></th>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Slosher')">スロッシャー系</a></th>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label><input type="checkbox" name="Shooter" value="わかばシューター" />わかばシューター</label><br>
+                    <label><input type="checkbox" name="Shooter" value="もみじシューター"/>もみじシューター</label><br>
+                    <label><input type="checkbox" name="Shooter" value="スプラシューター"/>スプラシューター</label><br>
+                    <label><input type="checkbox" name="Shooter" value="スプラシューターコラボ"/>スプラシューターコラボ</label><br>
+                    <label><input type="checkbox" name="Shooter" value="ボールドマーカー"/>ボールドマーカー</label><br>
+                    <label><input type="checkbox" name="Shooter" value="ボールドマーカーネオ"/>ボールドマーカーネオ</label><br>
+                    <label><input type="checkbox" name="Shooter" value="シャープマーカー"/>シャープマーカー</label><br>
+                    <label><input type="checkbox" name="Shooter" value="シャープマーカーネオ"/>シャープマーカーネオ</label><br>
+                    <label><input type="checkbox" name="Shooter" value="プロモデラーMG"/>プロモデラーMG</label><br>
+                    <label><input type="checkbox" name="Shooter" value="プロモデラーRG"/>プロモデラーRG</label><br>
+                    <label><input type="checkbox" name="Shooter" value=".52ガロン"/>.52ガロン</label><br>
+                    <label><input type="checkbox" name="Shooter" value=".96ガロン"/>.96ガロン</label><br>
+                    <label><input type="checkbox" name="Shooter" value=".96ガロンデコ"/>.96ガロンデコ</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Shooter" value="N-ZAP85"/>N-ZAP85</label><br>
+                    <label><input type="checkbox" name="Shooter" value="N-ZAP89"/>N-ZAP89</label><br>
+                    <label><input type="checkbox" name="Shooter" value="プライムシューター"/>プライムシューター</label><br>
+                    <label><input type="checkbox" name="Shooter" value="プライムシューターコラボ"/>プライムシューターコラボ</label><br>
+                    <label><input type="checkbox" name="Shooter" value="ジェットスイーパー"/>ジェットスイーパー</label><br>
+                    <label><input type="checkbox" name="Shooter" value="ジェットスイーパーカスタム"/>ジェットスイーパーカスタム</label><br>
+                    <label><input type="checkbox" name="Shooter" value="スペースシューター"/>スペースシューター</label><br>
+                    <label><input type="checkbox" name="Shooter" value="スペースシューターコラボ"/>スペースシューターコラボ</label><br>
+                    <label><input type="checkbox" name="Shooter" value="ボトルガイザー"/>ボトルガイザー</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Roller" value="スプラローラー"/>スプラローラー</label><br>
+                    <label><input type="checkbox" name="Roller" value="スプラローラーコラボ"/>スプラローラーコラボ</label><br>
+                    <label><input type="checkbox" name="Roller" value="カーボンローラー"/>カーボンローラー</label><br>
+                    <label><input type="checkbox" name="Roller" value="カーボンローラーデコ"/>カーボンローラーデコ</label><br>
+                    <label><input type="checkbox" name="Roller" value="ダイナモローラー"/>ダイナモローラー</label><br>
+                    <label><input type="checkbox" name="Roller" value="ヴァリアブルローラー"/>ヴァリアブルローラー</label><br>
+                    <label><input type="checkbox" name="Roller" value="ワイドローラー"/>ワイドローラー</label><br>
+                    <label><input type="checkbox" name="Roller" value="ワイドローラーコラボ"/>ワイドローラーコラボ</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Charger" value="スプラチャージャー"/>スプラチャージャー</label><br>
+                    <label><input type="checkbox" name="Charger" value="スプラチャージャーコラボ"/>スプラチャージャーコラボ</label><br>
+                    <label><input type="checkbox" name="Charger" value="スプラスコープ"/>スプラスコープ</label><br>
+                    <label><input type="checkbox" name="Charger" value="スプラスコープコラボ"/>スプラスコープコラボ</label><br>
+                    <label><input type="checkbox" name="Charger" value="スクイックリンα"/>スクイックリンα</label><br>
+                    <label><input type="checkbox" name="Charger" value="リッター4K"/>リッター4K</label><br>
+                    <label><input type="checkbox" name="Charger" value="4kスコープ"/>4kスコープ</label><br>
+                    <label><input type="checkbox" name="Charger" value="14式竹筒銃・甲"/>14式竹筒銃・甲</label><br>
+                    <label><input type="checkbox" name="Charger" value="ソイチューバー"/>ソイチューバー</label><br>
+                    <label><input type="checkbox" name="Charger" value="R-PEN/5H"/>R-PEN/5H</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Slosher" value="バケットスロッシャー"/>バケットスロッシャー</label><br>
+                    <label><input type="checkbox" name="Slosher" value="バケットスロッシャーデコ"/>バケットスロッシャーデコ</label><br>
+                    <label><input type="checkbox" name="Slosher" value="ヒッセン"/>ヒッセン</label><br>
+                    <label><input type="checkbox" name="Slosher" value="ヒッセン・ヒュー"/>ヒッセン・ヒュー</label><br>
+                    <label><input type="checkbox" name="Slosher" value="スクリュースロッシャー"/>スクリュースロッシャー</label><br>
+                    <label><input type="checkbox" name="Slosher" value="オーバーフロッシャー"/>オーバーフロッシャー</label><br>
+                    <label><input type="checkbox" name="Slosher" value="エクスプロッシャー"/>エクスプロッシャー</label><br>
+                </td>
+            </tr>
+            <tr>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Spinner')">スピナー系</a></th>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Maneuver')">マニュ系</a></th>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Shelter')">シェルター系</a></th>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Blaster')">ブラスター系</a></th>
+                <th width="18%"><a style="text-decoration:none;color:#000000;" href="JavaScript:AllChoose('Others')">その他<br>(筆・弓・ワイパー・リールガン)</a></th>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label><input type="checkbox" name="Spinner" value="スプラスピナー"/>スプラスピナー</label><br>
+                    <label><input type="checkbox" name="Spinner" value="スプラスピナーコラボ"/>スプラスピナーコラボ</label><br>
+                    <label><input type="checkbox" name="Spinner" value="バレルスピナー"/>バレルスピナー</label><br>
+                    <label><input type="checkbox" name="Spinner" value="バレルスピナーデコ"/>バレルスピナーデコ</label><br>
+                    <label><input type="checkbox" name="Spinner" value="ハイドラント"/>ハイドラント</label><br>
+                    <label><input type="checkbox" name="Spinner" value="クーゲルシュライバー"/>クーゲルシュライバー</label><br>
+                    <label><input type="checkbox" name="Spinner" value="ノーチラス47"/>ノーチラス47</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Maneuver" value="スプラマニューバー"/>スプラマニューバー</label><br>
+                    <label><input type="checkbox" name="Maneuver" value="スパッタリー"/>スパッタリー</label><br>
+                    <label><input type="checkbox" name="Maneuver" value="スパッタリー・ヒュー"/>スパッタリー・ヒュー</label><br>
+                    <label><input type="checkbox" name="Maneuver" value="ケルビン525"/>ケルビン525</label><br>
+                    <label><input type="checkbox" name="Maneuver" value="デュアルスイーパー"/>デュアルスイーパー</label><br>
+                    <label><input type="checkbox" name="Maneuver" value="デュアルスイーパーカスタム"/>デュアルスイーパーカスタム</label><br>
+                    <label><input type="checkbox" name="Maneuver" value="クアッドホッパーブラック"/>クアッドホッパーブラック</label><br>
+                    <label><input type="checkbox" name="Maneuver" value="クアッドホッパーホワイト"/>クアッドホッパーホワイト</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Shelter" value="パラシェルター"/>パラシェルター</label><br>
+                    <label><input type="checkbox" name="Shelter" value="キャンピングシェルター"/>キャンピングシェルター</label><br>
+                    <label><input type="checkbox" name="Shelter" value="キャンピングシェルターソレーラ"/>キャンピングシェルターソレーラ</label><br>
+                    <label><input type="checkbox" name="Shelter" value="スパイガジェット"/>スパイガジェット</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Blaster" value="ノヴァブラスター"/>ノヴァブラスター</label><br>
+                    <label><input type="checkbox" name="Blaster" value="ノヴァブラスターネオ"/>ノヴァブラスターネオ</label><br>
+                    <label><input type="checkbox" name="Blaster" value="ホットブラスター"/>ホットブラスター</label><br>
+                    <label><input type="checkbox" name="Blaster" value="ロングブラスター"/>ロングブラスター</label><br>
+                    <label><input type="checkbox" name="Blaster" value="クラッシュブラスター"/>クラッシュブラスター</label><br>
+                    <label><input type="checkbox" name="Blaster" value="クラッシュブラスターネオ"/>クラッシュブラスターネオ</label><br>
+                    <label><input type="checkbox" name="Blaster" value="ラピッドブラスター"/>ラピッドブラスター</label><br>
+                    <label><input type="checkbox" name="Blaster" value="ラピッドブラスターデコ"/>ラピッドブラスターデコ</label><br>
+                    <label><input type="checkbox" name="Blaster" value="Rブラスターエリート"/>Rブラスターエリート</label><br>
+                    <label><input type="checkbox" name="Blaster" value="Rブラスターエリートデコ"/>Rブラスターエリートデコ</label><br>
+                    <label><input type="checkbox" name="Blaster" value="S-BLAST92"/>S-BLAST92</label><br>
+                </td>
+                <td>
+                    <label><input type="checkbox" name="Others" value="パブロ"/>パブロ</label><br>
+                    <label><input type="checkbox" name="Others" value="パブロ・ヒュー"/>パブロ・ヒュー</label><br>
+                    <label><input type="checkbox" name="Others" value="ホクサイ"/>ホクサイ</label><br>
+                    <label><input type="checkbox" name="Others" value="フィンセント"/>フィンセント</label><br>
+                    <label><input type="checkbox" name="Others" value="トライストリンガー"/>トライストリンガー</label><br>
+                    <label><input type="checkbox" name="Others" value="LACT-450"/>LACT-450</label><br>
+                    <label><input type="checkbox" name="Others" value="ジムワイパー"/>ジムワイパー</label><br>
+                    <label><input type="checkbox" name="Others" value="ドライブワイパー"/>ドライブワイパー</label><br>
+                    <label><input type="checkbox" name="Others" value="ドライブワイパーデコ"/>ドライブワイパーデコ</label><br>
+                    <label><input type="checkbox" name="Others" value="L3リールガン"/>L3リールガン</label><br>
+                    <label><input type="checkbox" name="Others" value="L3リールガンD"/>L3リールガンD</label><br>
+                    <label><input type="checkbox" name="Others" value="H3リールガン"/>H3リールガン</label><br>
+                    <label><input type="checkbox" name="Others" value="H3リールガンD"/>H3リールガンD</label><br>
+                </td>
+            </tr>
+        </table><br>
+
+
+        <br>
+
+        <script type="text/javascript">
+            //全選択等の関数
+            function AllChooseSub(bool1,a){
+                const checkbox1=document.getElementsByName(a);
+                for (var i=0;i<checkbox1.length;i++){
+                    checkbox1[i].checked=bool1;
+                }
+            }
+            function AllChoose(a){
+                const checkbox1=document.getElementsByName(a);
+                if (checkbox1[0].checked==true){
+                    var tmp=false;
+                }else{
+                    var tmp=true;
+                }
+                AllChooseSub(tmp,a);
+            }
+            function Allchoose(bool1){
+                const spacies=['Shooter', 'Roller', 'Charger', 'Slosher', 'Spinner', 'Maneuver', 'Shelter', 'Blaster', 'Others'];
+                for(i=0;i<spacies.length;i++){
+                    AllChooseSub(bool1,spacies[i]);
+                }
+            }
+        </script>
+        <script>
+            //初期化
+            Allchoose(true);
+        </script>
+        <script>
+            var weaponBefore=null; //前回選択された武器の記憶
+            document.getElementById('btn').addEventListener('click',function(){
+                //選択されている武器の一覧を作成する
+                const spacies=['Shooter', 'Roller', 'Charger', 'Slosher', 'Spinner', 'Maneuver', 'Shelter', 'Blaster', 'Others'];
+                var weapons=[];
+                for(var loopvar1=0;loopvar1<spacies.length;loopvar1++){
+                    var checklist=document.getElementsByName(spacies[loopvar1]);
+                    for(var loopvar2=0;loopvar2<checklist.length;loopvar2++){
+                        if (checklist.item(loopvar2).checked){
+                            weapons.push(checklist.item(loopvar2).value)
+                        }
+                    }
+                }
+                //完成した武器の一覧からランダムで選択する
+                const respo=document.getElementById('respo');
+                var weapon=weapons[Math.floor(Math.random() * weapons.length)];
+                console.log("selected: ",weapon);
+                //ランダム選択が前回と重複した場合、80%の確率で再抽選を行う
+                if (weapon==weaponBefore){
+                    console.log("Same result as last time.");
+                    if(0.2<=Math.random()){
+                        weapon=weapons[Math.floor(Math.random() * weapons.length)];
+                        console.log("reselected: ",weapon);
+                    }
+                }
+                //結果出力
+                console.log("final result: ",weapon);
+                weaponBefore=weapon;
+                respo.textContent=weapon;
+            });
+        </script>
+
+    </body>
+</html>
